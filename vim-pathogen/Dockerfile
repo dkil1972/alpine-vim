@@ -1,6 +1,6 @@
-FROM jare/alpine-vim:latest
+FROM dkil1972/alpine-vim-base:latest
 
-MAINTAINER JAremko <w3techplaygound@gmail.com>
+MAINTAINER dkil1972 <dermot.kilroy@invoko.co.uk>
 
 RUN apk --update add curl                                                                                 && \
     mkdir -p /home/developer/bundle /home/developer/.vim/autoload /home/developer/.vim_runtime/temp_dirs  && \

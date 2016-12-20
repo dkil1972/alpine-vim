@@ -1,6 +1,6 @@
-FROM jare/vim-pathogen:latest
+FROM dkil1972/vim-pathogen:latest
 
-MAINTAINER JAremko <w3techplaygound@gmail.com>
+MAINTAINER dkil1972 <dermot.kilroy@invoko.co.uk>
 
 ENV TERM=xterm-256color
 ENV DISABLE=""
