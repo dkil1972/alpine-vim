@@ -43,6 +43,7 @@ RUN cd /home/developer/bundle/ && \
     git clone --depth 1 https://github.com/junegunn/vader.vim.git && \
     git clone --depth 1 https://github.com/reedes/vim-pencil && \
     git clone --depth 1 https://github.com/bling/vim-airline.git && \
+    git clone --depth 1 git://github.com/altercation/vim-colors-solarized.git && \
     git clone --depth 1 https://github.com/ekalinin/Dockerfile.vim.git 
 #    git clone --depth 1 https://github.com/scrooloose/nerdcommenter.git && \
 #    git clone --depth 1 https://github.com/godlygeek/tabular.git && \

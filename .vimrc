@@ -145,7 +145,7 @@ nnoremap <Leader>, :bp<CR>
 " => color and theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
-colorscheme slate
+colorscheme sorlarized
 set relativenumber
 set number
 
