@@ -30,6 +30,7 @@ RUN cd /home/developer/bundle/ && \
     git clone --depth 1 https://github.com/scrooloose/syntastic.git && \
     git clone --depth 1 https://github.com/kien/ctrlp.vim.git && \
     git clone --depth 1 https://github.com/OmniSharp/omnisharp-vim.git && \
+    git clone --depth 1 https://github.com/OmniSharp/omnisharp-roslyn.git && \
     git clone --depth 1 https://github.com/pangloss/vim-javascript.git && \
     git clone --depth 1 https://github.com/groenewege/vim-less.git && \
     git clone --depth 1 https://github.com/othree/html5.vim.git && \
@@ -38,12 +39,15 @@ RUN cd /home/developer/bundle/ && \
     git clone --depth 1 https://github.com/plasticboy/vim-markdown.git && \
     git clone --depth 1 https://github.com/terryma/vim-multiple-cursors.git && \
     git clone --depth 1 https://github.com/tpope/vim-surround.git && \
+    git clone --depth 1 https://github.com/tpope/vim-dispatch.git && \
+    git clone --depth 1 https://github.com/junegunn/vader.vim.git && \
+    git clone --depth 1 https://github.com/reedes/vim-pencil && \
+    git clone --depth 1 https://github.com/bling/vim-airline.git && \
     git clone --depth 1 https://github.com/ekalinin/Dockerfile.vim.git 
 #    git clone --depth 1 https://github.com/scrooloose/nerdcommenter.git && \
 #    git clone --depth 1 https://github.com/godlygeek/tabular.git && \
 #    git clone --depth 1 https://github.com/Raimondi/delimitMate.git && \
 #    git clone --depth 1 https://github.com/nathanaelkane/vim-indent-guides.git && \
-#    git clone --depth 1 https://github.com/bling/vim-airline.git && \
 #    git clone --depth 1 https://github.com/easymotion/vim-easymotion.git && \
 #    git clone --depth 1 https://github.com/mbbill/undotree.git && \
 #    git clone --depth 1 https://github.com/majutsushi/tagbar.git && \

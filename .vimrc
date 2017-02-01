@@ -22,10 +22,29 @@ map <leader>o :BufExplorer<cr>
 "map <leader>f :MRU<CR>
 "
 "
+
+""""""""""""""""""""""""""""""
+" => Settings for pencil a text editing plugin
+""""""""""""""""""""""""""""""
+augroup pencil
+    autocmd!
+    autocmd FileType markdown,mkd call pencil#init()
+    autocmd FileType text         call pencil#init({'wrap': 'hard'})
+    let g:pencil#textwidth = 100
+augroup END
+
+
 """""""""""""""""""""""""""""""
 "" => YankRing
 """""""""""""""""""""""""""""""
 "let g:yankring_history_dir = '/home/developer/.vim_runtime/temp_dirs'
+
+
+""""""""""""""""""""""""""""""
+" => Omnisharp
+""""""""""""""""""""""""""""""
+let g:OmniSharp_server_type = 'v1'
+let g:OmniSharp_server_type = 'roslyn'
 
 
 """"""""""""""""""""""""""""""
