@@ -47,6 +47,7 @@ RUN cd /home/developer/bundle/ && \
     git clone --depth 1 https://github.com/altercation/vim-colors-solarized.git && \
     git clone --depth 1 https://github.com/ekalinin/Dockerfile.vim.git && \
     git clone --depth 1 https://github.com/tomtom/tcomment_vim.git && \
+    git clone --depth 1 https://github.com/elixir-lang/vim-elixir.git && \
     git clone --depth 1 https://github.com/danielmiessler/VimBlog.git
 #    git clone --depth 1 https://github.com/scrooloose/nerdcommenter.git && \
 #    git clone --depth 1 https://github.com/godlygeek/tabular.git && \
