@@ -5,6 +5,7 @@ MAINTAINER dkil1972 <dermot.kilroy@invoko.co.uk>
 LABEL jare-compatible-dockerized-vim="true"
 
 COPY .vimrc /home/developer/my.vimrc
+COPY vimpressrc /home/developer/.vimpressrc
 
 #Plugins deps
 RUN apk --update add curl ctags git python bash ncurses-terminfo nodejs && \
@@ -45,7 +46,8 @@ RUN cd /home/developer/bundle/ && \
     git clone --depth 1 https://github.com/bling/vim-airline.git && \
     git clone --depth 1 https://github.com/altercation/vim-colors-solarized.git && \
     git clone --depth 1 https://github.com/ekalinin/Dockerfile.vim.git && \
-    git clone --depth 1 https://github.com/tomtom/tcomment_vim.git
+    git clone --depth 1 https://github.com/tomtom/tcomment_vim.git && \
+    git clone --depth 1 https://github.com/danielmiessler/VimBlog.git
 #    git clone --depth 1 https://github.com/scrooloose/nerdcommenter.git && \
 #    git clone --depth 1 https://github.com/godlygeek/tabular.git && \
 #    git clone --depth 1 https://github.com/Raimondi/delimitMate.git && \
