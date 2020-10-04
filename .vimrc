@@ -220,3 +220,7 @@ set encoding=utf-8
 "    \ 'e:enums',
 "  \ ]
 "\ }
+"
+let g:languagetool_jar='/home/developer/LanguageTool-5.1/languagetool-commandline.jar'
+set nofoldenable
+

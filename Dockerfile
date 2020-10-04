@@ -8,9 +8,9 @@ COPY .vimrc /home/developer/my.vimrc
 #What's in the vimpressrc file- COPY vimpressrc /home/developer/.vimpressrc
 
 #Plugins deps
-RUN apk --update add curl ctags git python3 bash ncurses-terminfo nodejs npm && \
+RUN apk --update add curl ctags git python3 bash ncurses-terminfo nodejs npm openjdk8-jre && \
 #Build YouCompleteMe
-    apk add --virtual build-deps go llvm perl cmake python3-dev build-base && \
+    apk add --virtual build-deps go llvm perl cmake python3-dev build-base openjdk8-jre && \
     git clone --depth 1  https://github.com/Valloric/YouCompleteMe.git /home/developer/bundle/YouCompleteMe/  &&   \
     cd /home/developer/bundle/YouCompleteMe && \
     git submodule update --init --recursive && \
@@ -26,6 +26,11 @@ RUN apk --update add curl ctags git python3 bash ncurses-terminfo nodejs npm && 
       /home/developer/bundle/YouCompleteMe/third_party/ycmd/clang_includes && \
     apk del build-deps && \
     apk add libxt libx11 libstdc++
+
+RUN cd /home/developer/ && \
+    wget https://languagetool.org/download/LanguageTool-stable.zip && \
+    unzip LanguageTool-stable.zip && \
+    rm LanguageTool-stable.zip
     
 RUN cd /home/developer/bundle/ && \
     git clone --depth 1 https://github.com/scrooloose/syntastic.git && \
@@ -49,7 +54,7 @@ RUN cd /home/developer/bundle/ && \
     git clone --depth 1 https://github.com/tomtom/tcomment_vim.git && \
     git clone --depth 1 https://github.com/elixir-lang/vim-elixir.git && \
     git clone --depth 1 https://github.com/danielmiessler/VimBlog.git && \
-    git clone --depth 1 https://github.com/languagetool-org/languagetool && \
+    git clone --depth 1 https://github.com/dpelle/vim-LanguageTool.git && \
     git clone --depth 1 https://github.com/hashivim/vim-terraform.git
 #    git clone --depth 1 https://github.com/scrooloose/nerdcommenter.git && \
 #    git clone --depth 1 https://github.com/godlygeek/tabular.git && \
