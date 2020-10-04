@@ -1,4 +1,4 @@
-FROM dkil1972/alpine-vim-base:latest
+FROM dkil1972/alpine-vim-base
 
 MAINTAINER dkil1972 <dermot.kilroy@invoko.co.uk>
 

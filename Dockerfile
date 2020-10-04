@@ -8,13 +8,13 @@ COPY .vimrc /home/developer/my.vimrc
 #What's in the vimpressrc file- COPY vimpressrc /home/developer/.vimpressrc
 
 #Plugins deps
-RUN apk --update add curl ctags git python bash ncurses-terminfo nodejs && \
+RUN apk --update add curl ctags git python3 bash ncurses-terminfo nodejs npm && \
 #Build YouCompleteMe
-    apk add --virtual build-deps go llvm perl cmake python-dev build-base && \
+    apk add --virtual build-deps go llvm perl cmake python3-dev build-base && \
     git clone --depth 1  https://github.com/Valloric/YouCompleteMe.git /home/developer/bundle/YouCompleteMe/  &&   \
     cd /home/developer/bundle/YouCompleteMe && \
     git submodule update --init --recursive && \
-    /home/developer/bundle/YouCompleteMe/install.py --gocode-completer --omnisharp-completer --tern-completer && \
+    python3 /home/developer/bundle/YouCompleteMe/install.py --gocode-completer --omnisharp-completer --tern-completer && \
 #Node.js deps (needed only if you're planning to mount and run jare/typescript)
     apk add libgcc libstdc++ libuv && \
 #Install and compile procvim.vim                                                                               
@@ -49,6 +49,7 @@ RUN cd /home/developer/bundle/ && \
     git clone --depth 1 https://github.com/tomtom/tcomment_vim.git && \
     git clone --depth 1 https://github.com/elixir-lang/vim-elixir.git && \
     git clone --depth 1 https://github.com/danielmiessler/VimBlog.git && \
+    git clone --depth 1 https://github.com/languagetool-org/languagetool && \
     git clone --depth 1 https://github.com/hashivim/vim-terraform.git
 #    git clone --depth 1 https://github.com/scrooloose/nerdcommenter.git && \
 #    git clone --depth 1 https://github.com/godlygeek/tabular.git && \
