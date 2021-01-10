@@ -37,6 +37,7 @@ RUN cd /home/developer/bundle/ && \
     git clone --depth 1 https://github.com/kien/ctrlp.vim.git && \
     git clone --depth 1 https://github.com/OmniSharp/omnisharp-vim.git && \
     git clone --depth 1 https://github.com/OmniSharp/omnisharp-roslyn.git && \
+    git clone --depth 1 https://github.com/MaxMEllon/vim-jsx-pretty.git && \
     git clone --depth 1 https://github.com/pangloss/vim-javascript.git && \
     git clone --depth 1 https://github.com/groenewege/vim-less.git && \
     git clone --depth 1 https://github.com/othree/html5.vim.git && \
