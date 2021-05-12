@@ -236,3 +236,5 @@ else
     let &t_EI.="\<Esc>[1 q"
     let &t_te.="\<Esc>[0 q"
 endif
+
+set spell spelllang=en_gb
